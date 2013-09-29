@@ -25,12 +25,15 @@ var mongo = require('mongodb'),
     collection = 'users',
     meta = {},
     mongoIP = process.env.MONGOLAB_IP,
+    mongoPort = process.env.MONGOLAB_PORT,
     mongoDb = process.env.MONGOLAB_DB,
     mongoUser = process.env.MONGOLAB_USER,
     mongoPass = process.env.MONGOLAB_PASS;
 
-var server = new Server('mongoIP', 47458, {});
-    db = new Db('mongoDb', server);
+console.log(mongoIP, mongoPort, mongoDb, mongoUser, mongoPass);
+
+var server = new Server(mongoIP, mongoPort, {});
+    db = new Db(mongoDb, server);
 
 db.open(function(err, client) {
     client.authenticate(mongoUser, mongoPass, function(err, success) {

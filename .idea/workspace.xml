@@ -16,7 +16,7 @@
     <file path="$PROJECT_DIR$/../../Tekify.me/app/scripts/utilities.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441379107" ignored="false" />
     <file path="/utilities.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441230667" ignored="false" />
     <file path="/openshift_environment" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380442986783" ignored="false" />
-    <file path="/users.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380443075909" ignored="false" />
+    <file path="/users.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380444000764" ignored="false" />
     <file path="/.gitignore" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380443180682" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,40 +46,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="users.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="14" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+            <state line="27" column="42" selection-start="676" selection-end="676" vertical-scroll-proportion="0.2107438">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="27" selection-start="536" selection-end="536" vertical-scroll-proportion="0.491453">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="openshift_environment" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/openshift_environment">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="11" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,9 +69,9 @@
       <list>
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/openshift_environment" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
       </list>
     </option>
   </component>
@@ -295,33 +268,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="122" selection-end="122" vertical-scroll-proportion="0.10683761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="35" selection-end="35" vertical-scroll-proportion="0.020661157">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/openshift_environment">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="11" vertical-scroll-proportion="0.0">
+        <state line="4" column="18" selection-start="114" selection-end="114" vertical-scroll-proportion="0.08264463">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="14" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+        <state line="27" column="42" selection-start="676" selection-end="676" vertical-scroll-proportion="0.2107438">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="536" selection-end="536" vertical-scroll-proportion="0.491453">
-          <folding />
         </state>
       </provider>
     </entry>
