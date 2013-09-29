@@ -52,7 +52,7 @@
       <file leaf-file-name="users.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="47" selection-start="367" selection-end="367" vertical-scroll-proportion="0.26859504">
+            <state line="18" column="31" selection-start="449" selection-end="449" vertical-scroll-proportion="0.37190083">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -63,7 +63,7 @@
       <file leaf-file-name="twilio.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/twilio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="20" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+            <state line="5" column="3" selection-start="46" selection-end="64" vertical-scroll-proportion="-2.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -74,7 +74,7 @@
       <file leaf-file-name="openshift_environment" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openshift_environment">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="44" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+            <state line="8" column="42" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/schemas/userSchema.js" />
         <option value="$PROJECT_DIR$/openshift_environment" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/services/twilio.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
       </list>
     </option>
   </component>
@@ -359,14 +359,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/openshift_environment">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+        <state line="8" column="42" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/twilio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+        <state line="5" column="3" selection-start="46" selection-end="64" vertical-scroll-proportion="-2.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -375,7 +375,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="367" selection-end="367" vertical-scroll-proportion="0.26859504">
+        <state line="18" column="31" selection-start="449" selection-end="449" vertical-scroll-proportion="0.37190083">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

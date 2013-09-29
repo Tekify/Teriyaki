@@ -22,7 +22,7 @@ var mongo = require('mongodb'),
     Db = mongo.Db,
     User = require('../schemas/userSchema'),
     twilio = require('../services/twilio'),
-    twilioMsg = 'Thanks you for your interest in Teknify.me, stay tuned for new updates.'
+    twilioMsg = 'Thanks you for your interest in Teknify.me, stay tuned for new updates.',
     db,
     whichDb = 'tekify',
     collection = 'users',

@@ -1,13 +1,11 @@
 {
-	"uuid" : "b3d67c58-e3bc-4393-b41f-32b3748630e9",
-	"phoneNumber" : "408-329-3102",
+	"uuid" : "3ee29460-8f9f-468d-a7ad-1b268caad8f9",
+	"phoneNumber" : "203-516-1645",
 	"device" : {
-		"width" : 100,
-		"height": 200,
+		"width" : 500,
+		"height": 300,
 		"platform" : "mac"
 	},
 	"language" : "en-US",
-	"ip": "127.0.0.1",
-	"time" : 123456
-
+	"ip": "127.0.0.1"
 }
