@@ -1,9 +1,11 @@
 {
-	"uuid" : "3ee29460-8f9f-468d-a7ad-1b268caad8f9",
-	"phoneNumber" : "203-516-1645",
+	"uuid" : "e952c73c-af63-4df2-960d-3f32ac6bcde2",
+	"phoneNumber" : "408-368-1973",
 	"device" : {
 		"width" : 500,
 		"height": 300,
+		"os" : "android",
+		"browser" : "chrome",
 		"platform" : "mac"
 	},
 	"language" : "en-US",

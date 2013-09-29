@@ -11,6 +11,6 @@ curl -X GET http://api-tekify.rhcloud.com/users/b3d67c58-e3bc-4393-b41f-32b37486
 
 curl -X POST -d @user.json http://localhost:8080/users/ --header "Content-Type:application/json"
 
-curl -X GET http://localhost:8080/users/b3d67c58-e3bc-4393-b41f-32b3748630e9
+curl -X GET http://localhost:8080/users/
 
-curl -X DELETE http://localhost:8080/users/b3d67c58-e3bc-4393-b41f-32b3748630e9
+curl -X DELETE http://localhost:8080/users/

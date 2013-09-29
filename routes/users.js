@@ -28,10 +28,10 @@ var mongo = require('mongodb'),
     collection = 'users',
     meta = {},
     mongoIP = process.env.MONGOLAB_IP,
-    mongoPort = process.env.MONGOLAB_PORT ,
-    mongoDb = process.env.MONGOLAB_DB ,
-    mongoUser = process.env.MONGOLAB_USER ,
-    mongoPass = process.env.MONGOLAB_PASS ;
+    mongoPort = process.env.MONGOLAB_PORT,
+    mongoDb = process.env.MONGOLAB_DB,
+    mongoUser = process.env.MONGOLAB_USER,
+    mongoPass = process.env.MONGOLAB_PASS;
 
 console.log(mongoIP, mongoPort, mongoDb, mongoUser, mongoPass);
 
@@ -56,12 +56,12 @@ db.open(function (err, client) {
 
 exports.findOne = function (req, res) {
 
-    var uuid = req.params.id;
-    console.log('uuid: ', uuid);
+    var phoneNumber = req.params.id;
+    console.log('phone: ', phoneNumber);
 
-    if (uuid) {
+    if (phoneNumber) {
         db.collection(collection, function (err, collection) {
-            collection.find({'uuid': uuid}, function (err, cursor) {
+            collection.find({'phoneNumber': phoneNumber}, function (err, cursor) {
                 cursor.toArray(function (err, user) {
                     if (err) {
                         var error = new Error('An error has occurred: ' + err);
@@ -111,11 +111,20 @@ exports.saveNumber = function (req, res) {
         phoneNumber = req.body.phoneNumber,
         device = req.body.device,
         language = req.body.langauge,
-        ip = req.body.ip;
+        ip = req.body.ip,
+        cleanNumber;
+
+    //remove all non number characters from phone number - http://stackoverflow.com/a/2555077
+    cleanNumber = phoneNumber.replace(/[^0-9\.]+/g, '');
+
+    if (cleanNumber[0] !== 1) {
+        cleanNumber = '1' + cleanNumber; //need 1 for twilio to work
+    }
 
     console.log('Adding user: ' + JSON.stringify(userData));
+    console.log('With phone number ', cleanNumber);
 
-    User.User.find({uuid: uuid}, function (err, docs) {
+    User.User.find({phoneNumber: cleanNumber}, function (err, docs) {
         if (err) {
             console.log('error', err);
         }
@@ -130,7 +139,9 @@ exports.saveNumber = function (req, res) {
                     "device" : {
                         "width" : device.width,
                         "height": device.height,
-                        "platform" : device.platform
+                        "os" : device.platform,
+                        "browser": device.browser,
+                        "version": device.version
                     },
                     "language" : language,
                     "ip": ip
@@ -159,13 +170,16 @@ exports.saveNumber = function (req, res) {
 
 exports.deleteUser = function(req, res) {
 
-    var uuid = req.params.id;
-    console.log('uuid: ', uuid);
+    var phoneNumber = req.params.id;
 
-    if (uuid) {
-        console.log('Deleting user: ' + uuid);
+    //remove all non number characters from phone number - http://stackoverflow.com/a/2555077
+    phoneNumber = phoneNumber.replace(/[^0-9\.]+/g, '');
+    console.log('phoneNumber: ', phoneNumber);
+
+    if (phoneNumber) {
+        console.log('Deleting user: ' + phoneNumber);
         db.collection(collection, function(err, collection) {
-            collection.remove({'uuid' : uuid}, {safe : true}, function(err, result) {
+            collection.remove({'phoneNumber' : phoneNumber}, {safe : true}, function(err, result) {
                 if (err) {
                     errorHandler(err, req, res, '');
                 }
@@ -174,7 +188,7 @@ exports.deleteUser = function(req, res) {
                     res.send(
                         {
                             'message' : 'Successfully deleted user',
-                            'uuid': uuid
+                            'phoneNumber': phoneNumber
                         }
                     );
                 }
