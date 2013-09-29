@@ -69,6 +69,9 @@ app.get('/users/:id', users.findOne);
 /** POST **/
 app.post('/users/', users.saveNumber);
 
+/** DELETE **/
+app.delete('/users/:id', users.deleteUser);
+
 http.createServer(app).listen(port, host, function(){
   console.log('API listening on port ' + app.get('port'));
 });

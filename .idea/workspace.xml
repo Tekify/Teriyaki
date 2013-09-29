@@ -4,22 +4,22 @@
     <list default="true" id="7af3149b-ed89-4d91-941b-9ce99b0feb49" name="Default" comment="" />
     <ignored path="API.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380446183842" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Tekify.me/app/signup.html" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441404770" ignored="false" />
+    <file path="/app.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380450627384" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Tekify.me/app/signup.html" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380451879305" ignored="false" />
     <file path="/signup.html" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441200219" ignored="false" />
     <file path="$PROJECT_DIR$/../../Tekify.me/app/index.html" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441410199" ignored="false" />
     <file path="/index.html" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380439925282" ignored="false" />
     <file path="$PROJECT_DIR$/../../Tekify.me/app/scripts/main.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441388066" ignored="false" />
     <file path="/main.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441103558" ignored="false" />
-    <file path="$PROJECT_DIR$/../../Tekify.me/app/scripts/signup.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441931267" ignored="false" />
-    <file path="/signup.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441931267" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Tekify.me/app/scripts/signup.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380452861632" ignored="false" />
+    <file path="/signup.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380452825680" ignored="false" />
     <file path="$PROJECT_DIR$/../../Tekify.me/app/scripts/utilities.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441379107" ignored="false" />
     <file path="/utilities.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441230667" ignored="false" />
     <file path="/openshift_environment" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380444767281" ignored="false" />
-    <file path="/users.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380449642393" ignored="false" />
+    <file path="/users.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380450724198" ignored="false" />
     <file path="/.gitignore" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380443180682" ignored="false" />
     <file path="/package.json" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448437905" ignored="false" />
-    <file path="/userSchema.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448467491" ignored="false" />
+    <file path="/userSchema.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380452540971" ignored="false" />
     <file path="/twilio.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380449486263" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +43,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
+            <state line="72" column="41" selection-start="1936" selection-end="1946" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,7 +52,18 @@
       <file leaf-file-name="users.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="31" selection-start="449" selection-end="449" vertical-scroll-proportion="0.37190083">
+            <state line="32" column="43" selection-start="939" selection-end="939" vertical-scroll-proportion="0.661157">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userSchema.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/schemas/userSchema.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="16" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -63,7 +74,7 @@
       <file leaf-file-name="twilio.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/twilio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="3" selection-start="46" selection-end="64" vertical-scroll-proportion="-2.0">
+            <state line="8" column="47" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -74,7 +85,7 @@
       <file leaf-file-name="openshift_environment" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openshift_environment">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="42" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+            <state line="8" column="50" selection-start="289" selection-end="321" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,10 +102,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/schemas/userSchema.js" />
         <option value="$PROJECT_DIR$/openshift_environment" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/schemas/userSchema.js" />
         <option value="$PROJECT_DIR$/services/twilio.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
       </list>
@@ -334,13 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="19" selection-start="197" selection-end="197" vertical-scroll-proportion="0.1923077">
@@ -348,25 +352,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/schemas/userSchema.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="2" selection-start="618" selection-end="618" vertical-scroll-proportion="0.5371901">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="72" column="41" selection-start="1936" selection-end="1946" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/openshift_environment">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="42" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+        <state line="8" column="50" selection-start="289" selection-end="321" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/twilio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="3" selection-start="46" selection-end="64" vertical-scroll-proportion="-2.0">
+        <state line="8" column="47" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schemas/userSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="16" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -375,7 +386,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="449" selection-end="449" vertical-scroll-proportion="0.37190083">
+        <state line="32" column="43" selection-start="939" selection-end="939" vertical-scroll-proportion="0.661157">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

@@ -22,16 +22,16 @@ var mongo = require('mongodb'),
     Db = mongo.Db,
     User = require('../schemas/userSchema'),
     twilio = require('../services/twilio'),
-    twilioMsg = 'Thanks you for your interest in Teknify.me, stay tuned for new updates.',
+    twilioMsg = 'Thank you for your interest in Tekify.me, stay tuned for new updates.',
     db,
     whichDb = 'tekify',
     collection = 'users',
     meta = {},
     mongoIP = process.env.MONGOLAB_IP,
-    mongoPort = process.env.MONGOLAB_PORT,
-    mongoDb = process.env.MONGOLAB_DB,
-    mongoUser = process.env.MONGOLAB_USER,
-    mongoPass = process.env.MONGOLAB_PASS;
+    mongoPort = process.env.MONGOLAB_PORT ,
+    mongoDb = process.env.MONGOLAB_DB ,
+    mongoUser = process.env.MONGOLAB_USER ,
+    mongoPass = process.env.MONGOLAB_PASS ;
 
 console.log(mongoIP, mongoPort, mongoDb, mongoUser, mongoPass);
 
@@ -105,6 +105,7 @@ exports.findOne = function (req, res) {
  * POST save user information
  */
 exports.saveNumber = function (req, res) {
+
     var userData = req.body,
         uuid = req.body.uuid,
         phoneNumber = req.body.phoneNumber,
@@ -140,7 +141,8 @@ exports.saveNumber = function (req, res) {
                     }
                     else {
                         //send sms to use
-                        twilio.sendSMS('+' + phoneNumber, twilioMsg);
+                        //check to see if it starts with + or + 1
+                        twilio.sendSMS('+1' + phoneNumber, twilioMsg);
 
                         var meta = {};
                         meta.status = 200; //is this ok?
@@ -151,6 +153,34 @@ exports.saveNumber = function (req, res) {
             }
         }
     });
+};
+
+/** DELETE delete a user **/
+
+exports.deleteUser = function(req, res) {
+
+    var uuid = req.params.id;
+    console.log('uuid: ', uuid);
+
+    if (uuid) {
+        console.log('Deleting user: ' + uuid);
+        db.collection(collection, function(err, collection) {
+            collection.remove({'uuid' : uuid}, {safe : true}, function(err, result) {
+                if (err) {
+                    errorHandler(err, req, res, '');
+                }
+                else {
+                    console.log('' + result + ' document(s) deleted');
+                    res.send(
+                        {
+                            'message' : 'Successfully deleted user',
+                            'uuid': uuid
+                        }
+                    );
+                }
+            });
+        });
+    }
 };
 
 /**

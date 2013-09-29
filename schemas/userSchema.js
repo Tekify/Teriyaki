@@ -29,7 +29,9 @@ var UserSchema = new Schema({
     device: {
         width: {type: Number},
         height: {type: Number},
-        platform: {type: String}
+        os: {type: String},
+        browser: {type: String},
+        version: {type: String}
     },
     language: {type: String},
     ip: {type: String},

@@ -42,7 +42,5 @@ function sendSMS(number, msg) {
     });
 }
 
-sendSMS('+14083293102', 'yo dawg i heard you like node.js');
-
 /** Expose Public API **/
 exports.sendSMS = sendSMS;
