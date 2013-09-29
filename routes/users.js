@@ -22,6 +22,7 @@ var mongo = require('mongodb'),
     Db = mongo.Db,
     User = require('../schemas/userSchema'),
     twilio = require('../services/twilio'),
+    ip2location = require('../services/ip2location'),
     twilioMsg = 'Thank you for your interest in Tekify.me, stay tuned for new updates.',
     db,
     whichDb = 'tekify',
@@ -111,7 +112,7 @@ exports.saveNumber = function (req, res) {
         phoneNumber = req.body.phoneNumber,
         device = req.body.device,
         language = req.body.langauge,
-        ip = req.body.ip,
+        ip = req.body.ip || ip2location.getClientIp(req),
         cleanNumber;
 
     //remove all non number characters from phone number - http://stackoverflow.com/a/2555077
