@@ -1,5 +1,5 @@
 {
-  "name": "desvioapi",
+  "name": "Tekiy-API",
   "version": "1.0.0",
   "dependencies": {
     "express": {
@@ -125,6 +125,46 @@
         "kerberos": {
           "version": "0.0.3",
           "from": "kerberos@0.0.3"
+        }
+      }
+    },
+    "mongoose": {
+      "version": "3.6.20",
+      "from": "mongoose@",
+      "dependencies": {
+        "hooks": {
+          "version": "0.2.1",
+          "from": "hooks@0.2.1"
+        },
+        "ms": {
+          "version": "0.1.0",
+          "from": "ms@0.1.0"
+        },
+        "sliced": {
+          "version": "0.0.5",
+          "from": "sliced@0.0.5"
+        },
+        "muri": {
+          "version": "0.3.1",
+          "from": "muri@0.3.1"
+        },
+        "mpromise": {
+          "version": "0.2.1",
+          "from": "mpromise@0.2.1",
+          "dependencies": {
+            "sliced": {
+              "version": "0.0.4",
+              "from": "sliced@0.0.4"
+            }
+          }
+        },
+        "mpath": {
+          "version": "0.1.1",
+          "from": "mpath@0.1.1"
+        },
+        "regexp-clone": {
+          "version": "0.0.1",
+          "from": "regexp-clone@0.0.1"
         }
       }
     }
