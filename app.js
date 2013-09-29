@@ -64,7 +64,10 @@ if ('development' == app.get('env')) {
  */
 
 /** GET **/
-app.get('/users/', users.getSiteByDomain);
+app.get('/users/', users.findOne);
+
+/** POST **/
+app.post('/users/', users.saveNumber);
 
 http.createServer(app).listen(port, host, function(){
   console.log('API listening on port ' + app.get('port'));

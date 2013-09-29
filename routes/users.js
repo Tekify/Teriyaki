@@ -20,6 +20,7 @@ var mongo = require('mongodb'),
     url = require('url'),
     Server = mongo.Server,
     Db = mongo.Db,
+    User = require('../schemas/userSchema'),
     db,
     whichDb = 'tekify',
     collection = 'users',
@@ -33,10 +34,10 @@ var mongo = require('mongodb'),
 console.log(mongoIP, mongoPort, mongoDb, mongoUser, mongoPass);
 
 var server = new Server(mongoIP, mongoPort, {});
-    db = new Db(mongoDb, server);
+db = new Db(mongoDb, server);
 
-db.open(function(err, client) {
-    client.authenticate(mongoUser, mongoPass, function(err, success) {
+db.open(function (err, client) {
+    client.authenticate(mongoUser, mongoPass, function (err, success) {
         if (err) {
             console.log('error connecting to mongoLab db: ', err);
         }
@@ -48,107 +49,48 @@ db.open(function(err, client) {
 });
 
 /*
-else {
-    var localServer = new mongo.Server("127.0.0.1", 27017, {});
-    db = new mongo.Db(whichDb, localServer, {});
-    db.open(function (err, client) {
-        if (err) {
-            throw err;
-        }
-        else {
-            console.log('connected to ' + whichDb);
-            db.collection(collection, {safe: true}, function (err, collection) {
-                if (!err) {
-                    console.log('open collection ');
-                }
-                else {
-                    throw err;
-                }
-            });
-        }
-    });
-}
-*/
-
-
-/*
- * GET a site
+ * GET a single user
  */
 
-exports.getSiteByDomain = function (req, res) {
+exports.findOne = function (req, res) {
 
     var urlParts = url.parse(req.url, true),
-        query = urlParts.query,
-        domain = query.domain,
-        ip = ip2location.getClientIp(req),
-        countryCode = query.cc || ip2location.getCountryCode(ip),
-        defaultItem;
+        uuid = urlParts.uuid;
 
-    console.log('country code: ', countryCode);
-    console.log('domain is: ', domain);
+    console.log('uuid: ', uuid);
 
-    if (domain) {
+    if (uuid) {
         db.collection(collection, function (err, collection) {
-            collection.find({ $or: [
-                    {'domain': domain},
-                    {'domain': domain, 'country_code': countryCode}
-                ]
-                },
-                function (err, cursor) {
-                    cursor.toArray(function (err, items) {
-                        if (err) {
-                            var error = new Error('An error has occurred: ' + err);
-                            error.code = 500;
-                            errorHandler(error, req, res, '');
+            collection.find({'uuid': uuid}, function (err, cursor) {
+                cursor.toArray(function (err, user) {
+                    if (err) {
+                        var error = new Error('An error has occurred: ' + err);
+                        error.code = 500;
+                        errorHandler(error, req, res, '');
+                    }
+                    else {
+                        if (user) {
+                            console.log('user retrieved is: ', user);
+
+                            //build response
+                            meta = {};
+                            meta.status = 200;
+                            meta.statusMessage = 'The request was fulfilled';
+                            meta.totalResults = 1; //we'll always have 1 result for now
+                            formatThenSendResponse(meta, user, true, res, '');
                         }
+                        //we don't have any items to send back
                         else {
-                            console.log('items retrieved are: ', items);
-
-                            //there are at least 1 items found in the DB
-                            if (!!(items.length)) {
-                                /**
-                                 * We want to return the entry which matches our country code
-                                 * If not we return the DEF entry
-                                 *
-                                 * If no country code or DEF entry exists then we simply let the user pass
-                                 */
-                                items.every(function (item) {
-
-                                    //Get our default item first
-                                    if (item.country_code === 'DEF') {
-                                        defaultItem = item;
-                                    }
-
-                                    //Then try to match our country code
-                                    if (item.country_code === countryCode) {
-                                        defaultItem = item;
-                                        return false;
-                                    }
-                                    return true;
-                                });
-                                items.length = 0; //delete the items array now that we have our correct match
-                                items = defaultItem;
-
-                                //build response
-                                meta = {};
-                                meta.status = 200;
-                                meta.statusMessage = 'The request was fulfilled';
-                                meta.totalResults = 1; //we'll always have 1 result for now
-                                formatThenSendResponse(meta, items, true, res, '');
-                            }
-
-                            //we don't have any items to send back
-                            else {
-                                //build response
-                                meta = {};
-                                meta.status = 200;
-                                meta.statusMessage = 'The request was fulfilled';
-                                meta.totalResults = 0;
-                                formatThenSendResponse(meta, [], true, res, '');
-                            }
+                            //build response
+                            meta = {};
+                            meta.status = 200;
+                            meta.statusMessage = 'The request was fulfilled';
+                            meta.totalResults = 0;
+                            formatThenSendResponse(meta, [], true, res, '');
                         }
-                    });
-                })
+                    }
+                });
+            })
         });
     }
     else {
@@ -157,6 +99,55 @@ exports.getSiteByDomain = function (req, res) {
         error.code = 400;
         errorHandler(error, req, res, '');
     }
+};
+
+/**
+ * POST save user information
+ */
+exports.saveNumber = function (req, res) {
+    var userData = req.body,
+        uuid = req.body.uuid,
+        phoneNumber = req.body.phoneNumber,
+        device = req.body.device,
+        language = req.body.langauge,
+        ip = req.body.ip;
+
+    console.log('Adding user: ' + JSON.stringify(userData));
+
+    User.User.find({uuid: uuid}, function (err, docs) {
+        if (err) {
+            console.log('error', err);
+        }
+        else {
+            if (docs.length >= 1) {
+                res.send('user already exists: ' + docs[0]._id);
+            }
+            else {
+                var user = new User.User({
+                    "uuid" : uuiod,
+                    "phoneNumber" : phoneNumber,
+                    "device" : {
+                        "width" : device.width,
+                        "height": device.height,
+                        "platform" : device.platform
+                    },
+                    "language" : language,
+                    "ip": ip
+                });
+                user.save(function (err, user) {
+                    if (err) {
+                        console.log('Error on user save!')
+                    }
+                    else {
+                        var meta = {};
+                        meta.status = 200; //is this ok?
+                        meta.statusMessage = 'Created user account';
+                        formatThenSendResponse(meta, user, true, res, '');
+                    }
+                });
+            }
+        }
+    });
 };
 
 /**
@@ -172,15 +163,15 @@ exports.getSiteByDomain = function (req, res) {
  *      @param meta.totalResults {int} number of results returned
  *      @param meta.contentType {string} content type of response, application/json by default
  *
- * @param sites {Object} the site results that match the domain and country code
+ * @param data {Object} the site results that match the domain and country code
  * @param stringify {Boolean} True will stringify response, false will return an object
  *
  **/
-function formatThenSendResponse(meta, sites, stringify, res, next) {
+function formatThenSendResponse(meta, data, stringify, res, next) {
     var response = {};
     response.meta = meta || {};
     response.meta.contentType = meta.contentType || 'application/json';
-    response.sites = sites || [];
+    response.data = data || [];
     stringify = stringify || true;
     res.contentType('application/json');
     res.send(stringify ? JSON.stringify(response) : response);
