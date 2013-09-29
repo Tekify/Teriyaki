@@ -1,0 +1,14 @@
+--- 
+applications: 
+  .: 
+    name: desvio
+    mem: 64M
+    infra: aws
+    instances: 1
+    framework: 
+      name: node
+      info: 
+        mem: 64M
+        description: Node.js Application
+        exec: 
+    url: ${name}.${target-base}
