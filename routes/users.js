@@ -21,6 +21,8 @@ var mongo = require('mongodb'),
     Server = mongo.Server,
     Db = mongo.Db,
     User = require('../schemas/userSchema'),
+    twilio = require('../services/twilio'),
+    twilioMsg = 'Thanks you for your interest in Teknify.me, stay tuned for new updates.'
     db,
     whichDb = 'tekify',
     collection = 'users',
@@ -137,6 +139,9 @@ exports.saveNumber = function (req, res) {
                         console.log('Error on user save!')
                     }
                     else {
+                        //send sms to use
+                        twilio.sendSMS('+' + phoneNumber, twilioMsg);
+
                         var meta = {};
                         meta.status = 200; //is this ok?
                         meta.statusMessage = 'Created user account';

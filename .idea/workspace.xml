@@ -16,11 +16,11 @@
     <file path="$PROJECT_DIR$/../../Tekify.me/app/scripts/utilities.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441379107" ignored="false" />
     <file path="/utilities.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380441230667" ignored="false" />
     <file path="/openshift_environment" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380444767281" ignored="false" />
-    <file path="/users.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380447576512" ignored="false" />
+    <file path="/users.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380449642393" ignored="false" />
     <file path="/.gitignore" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380443180682" ignored="false" />
     <file path="/package.json" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448437905" ignored="false" />
     <file path="/userSchema.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448467491" ignored="false" />
-    <file path="/twilio.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448282439" ignored="false" />
+    <file path="/twilio.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380449486263" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="users.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="25" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userSchema.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/schemas/userSchema.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.1446281">
+            <state line="13" column="47" selection-start="367" selection-end="367" vertical-scroll-proportion="0.26859504">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -74,7 +63,7 @@
       <file leaf-file-name="twilio.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/twilio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+            <state line="5" column="20" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -82,19 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="562" selection-end="562" vertical-scroll-proportion="-15.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="openshift_environment" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openshift_environment">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="44" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+            <state line="8" column="44" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,12 +91,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/openshift_environment" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
-        <option value="$PROJECT_DIR$/services/twilio.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/schemas/userSchema.js" />
+        <option value="$PROJECT_DIR$/openshift_environment" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/services/twilio.js" />
       </list>
     </option>
   </component>
@@ -361,41 +341,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/twilio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="562" selection-end="562" vertical-scroll-proportion="-15.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openshift_environment">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="44" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+        <state line="9" column="19" selection-start="197" selection-end="197" vertical-scroll-proportion="0.1923077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/schemas/userSchema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.1446281">
+        <state line="27" column="2" selection-start="618" selection-end="618" vertical-scroll-proportion="0.5371901">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openshift_environment">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="44" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/twilio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="47" selection-start="367" selection-end="367" vertical-scroll-proportion="0.26859504">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
