@@ -18,8 +18,9 @@
     <file path="/openshift_environment" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380444767281" ignored="false" />
     <file path="/users.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380447576512" ignored="false" />
     <file path="/.gitignore" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380443180682" ignored="false" />
-    <file path="/package.json" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380444533277" ignored="false" />
-    <file path="/userSchema.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380447295096" ignored="false" />
+    <file path="/package.json" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448437905" ignored="false" />
+    <file path="/userSchema.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448467491" ignored="false" />
+    <file path="/twilio.js" changelist="7af3149b-ed89-4d91-941b-9ce99b0feb49" time="1380448282439" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +63,39 @@
       <file leaf-file-name="userSchema.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/schemas/userSchema.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="48" selection-start="237" selection-end="237" vertical-scroll-proportion="0.22727273">
+            <state line="8" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.1446281">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="twilio.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/twilio.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="25" selection-start="562" selection-end="562" vertical-scroll-proportion="-15.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="openshift_environment" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/openshift_environment">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="44" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,10 +111,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/openshift_environment" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/services/twilio.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/schemas/userSchema.js" />
       </list>
     </option>
@@ -150,6 +181,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="schemas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -174,10 +219,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
       <server id="9bb5d0ef-21ac-4594-a803-091477cdb4be">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="f01cadaf-dd4a-406a-a33f-870267a82cc0">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" />
@@ -213,7 +270,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299725" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25206232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -297,23 +354,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="27" selection-start="620" selection-end="620" vertical-scroll-proportion="0.5982906">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openshift_environment">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="49" selection-start="164" selection-end="164" vertical-scroll-proportion="0.10330579">
           <folding />
         </state>
       </provider>
@@ -327,9 +370,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/services/twilio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="25" selection-start="562" selection-end="562" vertical-scroll-proportion="-15.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openshift_environment">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="44" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/schemas/userSchema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="48" selection-start="237" selection-end="237" vertical-scroll-proportion="0.22727273">
+        <state line="8" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.1446281">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
