@@ -20,7 +20,7 @@ var mongo = require('mongodb'),
     url = require('url'),
     Server = mongo.Server,
     Db = mongo.Db,
-    User = require('./schemas/userSchema'),
+    User = require('../schemas/userSchema'),
     db,
     whichDb = 'tekify',
     collection = 'users',
@@ -54,9 +54,7 @@ db.open(function (err, client) {
 
 exports.findOne = function (req, res) {
 
-    var urlParts = url.parse(req.url, true),
-        uuid = urlParts.uuid;
-
+    var uuid = req.params.id;
     console.log('uuid: ', uuid);
 
     if (uuid) {
@@ -69,7 +67,7 @@ exports.findOne = function (req, res) {
                         errorHandler(error, req, res, '');
                     }
                     else {
-                        if (user) {
+                        if (user.length !== 0) {
                             console.log('user retrieved is: ', user);
 
                             //build response
@@ -124,7 +122,7 @@ exports.saveNumber = function (req, res) {
             }
             else {
                 var user = new User.User({
-                    "uuid" : uuiod,
+                    "uuid" : uuid,
                     "phoneNumber" : phoneNumber,
                     "device" : {
                         "width" : device.width,

@@ -64,7 +64,7 @@ if ('development' == app.get('env')) {
  */
 
 /** GET **/
-app.get('/users/', users.findOne);
+app.get('/users/:id', users.findOne);
 
 /** POST **/
 app.post('/users/', users.saveNumber);
