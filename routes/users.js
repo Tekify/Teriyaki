@@ -140,7 +140,7 @@ exports.saveNumber = function (req, res) {
                     "device" : {
                         "width" : device.width,
                         "height": device.height,
-                        "os" : device.platform,
+                        "os" : device.os,
                         "browser": device.browser,
                         "version": device.version
                     },
